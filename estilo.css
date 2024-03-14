@@ -11,43 +11,55 @@ body {
 
 }
 
-hearder,
-footer{
+header, footer {
     height: 60px;
 
 }
 
-main{
-    height: cal(100vh -150px);
-    display: flex;
-    gap: 10px;
-    padding: 10px 0;
-
-}
-
-main div{
-   width: 33%;
-   background-color: orange;
-   height: 100%;
-
-}
-
-.dobbro{
-    flex-grow: 2;
-
-}
-
-header{
+header {
     background-color: blueviolet;
 }
 
-footer{
+footer {
     background-color: brown;
 
 }
 
-header,
-main,
-footer{
+header,main,footer {
+    
     border: 1px solid #000;
+}
+
+main {
+    display: flex;
+    gap: 10px;
+    padding: 10px 0;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+main div {
+    width: 30%;
+    background-color: orange;
+    height: calc(100vh - 120px);
+
+}
+
+@media (max-width: 768px) {
+    main {
+        height: auto;
+    }
+
+    main div {
+        width: 45%;
+        height: 100vh;
+    }
+}
+
+@media (max-width: 576px) {
+
+    main div {
+        width: 98%;
+    }
 }
